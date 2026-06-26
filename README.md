@@ -37,6 +37,31 @@ Every skill's scripts are plain Python/Bash — just run them:
 python3 pcap-wlan-mgmt-diff/scripts/assoc_diff.py --help
 ```
 
+## Prerequisites
+
+Most skills only need standard tools. Check each skill's README or SKILL.md for specific requirements.
+
+| Tool | Install |
+|------|---------|
+| `tshark` | See [tshark setup](#tshark-setup) below |
+| `python3` ≥ 3.9 | System default |
+
+### tshark Setup
+
+The package manager version is often outdated. Install the latest stable release from the
+official Wireshark PPA for full 802.11 protocol decoding support:
+
+```bash
+sudo add-apt-repository ppa:wireshark-dev/stable
+sudo apt update
+sudo apt install tshark
+```
+
+Verify:
+```bash
+tshark --version   # should show 4.x
+```
+
 ## Adding a New Skill
 
 ```bash
@@ -66,16 +91,6 @@ license: MIT
 platforms: [linux, macos]
 ---
 ```
-
-## Prerequisites
-
-Most skills only need standard tools. Check each skill's README or SKILL.md for specific requirements.
-Common dependencies:
-
-| Tool | Install |
-|------|---------|
-| `tshark` ≥ 4.x | `sudo apt install tshark` / `brew install wireshark` |
-| `python3` ≥ 3.9 | System default |
 
 ## License
 
