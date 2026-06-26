@@ -39,17 +39,20 @@ python3 pcap-wlan-mgmt-diff/scripts/assoc_diff.py --help
 
 ## Prerequisites
 
-Most skills only need standard tools. Check each skill's README or SKILL.md for specific requirements.
+Each skill has its own requirements. Check individual SKILL.md or README for details.
 
-| Tool | Install |
-|------|---------|
-| `tshark` | See [tshark setup](#tshark-setup) below |
-| `python3` ≥ 3.9 | System default |
+### pcap-wlan-mgmt-diff
 
-### tshark Setup
+| Dependency | Level | Install |
+|-----------|-------|---------|
+| `python3` ≥ 3.9 | **Required** | System default |
+| `tshark` ≥ 4.x | **Required** | See [tshark setup](#tshark-setup) |
+| `scapy` | Not needed | This skill is scapy-free |
 
-The package manager version is often outdated. Install the latest stable release from the
-official Wireshark PPA for full 802.11 protocol decoding support:
+#### tshark Setup
+
+The apt default version is often outdated. Install the latest stable release from the
+official Wireshark PPA for full 802.11 protocol decoding:
 
 ```bash
 sudo add-apt-repository ppa:wireshark-dev/stable
