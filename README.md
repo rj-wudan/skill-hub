@@ -12,6 +12,7 @@ Hermes Agent, Claude Code, Codex, and similar platforms.
 | Skill | Description | Hermes | Standalone |
 |-------|-------------|--------|------------|
 | [pcap-wlan-mgmt-diff](./pcap-wlan-mgmt-diff/) | Compare two 802.11 pcap files, diff every management frame IE subfield, generate HTML report with protocol impact scoring | Load via `/skill` or `hermes -s` | `python3 scripts/assoc_diff.py a.pcap b.pcap` |
+| [cls-case-weekly-report](./cls-case-weekly-report/) | Generate weekly case reports from ClourneySemi (云程) Redmine — resolved/open cases, assignee distribution, stale alerts, resolution trends, risk analysis | `hermes cron create ... --skill cls-case-weekly-report` | `python3 scripts/generate_report.py` |
 
 ## Using a Skill
 
